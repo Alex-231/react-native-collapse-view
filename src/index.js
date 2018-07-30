@@ -7,6 +7,9 @@ const propTypes = {
   renderCollapseView: PropTypes.func.isRequired,
   collapse: PropTypes.bool,
   tension: PropTypes.number,
+  animatedViewStyle: PropTypes.object,
+  expandedStyle: PropTypes.object,
+  collapsedStyle: PropTypes.object
 }
 const defaultProps = {
   collapse: false,
@@ -57,11 +60,11 @@ class CollapseView extends Component {
   render() {
     const { startpoint, endpoint, animation, collapse } = this.state;
     return (
-      <Animated.View style={{height: this.state.animation, backgroundColor:'transparent', overflow: 'hidden'}}>
-        <TouchableOpacity activeOpacity={1} onPress={this.collapse} onLayout={this.startpoint}>
+      <Animated.View style={[{height: this.state.animation, backgroundColor:'transparent', overflow: 'hidden'}, this.props.animatedViewStyle]}>
+        <TouchableOpacity style={this.props.collapsedStyle} activeOpacity={1} onPress={this.collapse} onLayout={this.startpoint}>
           {this.props.renderView(this.state.collapse)}
         </TouchableOpacity>
-        <View onLayout={this.endpoint}>
+        <View style={this.props.expandedStyle} onLayout={this.endpoint}>
           {this.props.renderCollapseView(this.state.collapse)}
         </View>
       </Animated.View>

@@ -1,6 +1,6 @@
 {
   "name": "react-native-collapse-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./src",
   "scripts": {
@@ -18,15 +18,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanpyaelin/react-native-collapse-view.git"
+    "url": "git+https://github.com/Alex-231/react-native-collapse-view.git"
   },
   "author": "San Pyae Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sanpyaelin/react-native-collapse-view/issues"
+    "url": "https://github.com/Alex-231/react-native-collapse-view/issues"
   },
   "dependencies": {
     "prop-types": "^15.5.10"
   },
-  "homepage": "https://github.com/sanpyaelin/react-native-collapse-view#readme"
+  "homepage": "https://github.com/Alex-231/react-native-collapse-view#readme"
 }
